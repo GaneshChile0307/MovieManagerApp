@@ -1,0 +1,16 @@
+<h2>Add Watched Movies</h2>
+  <h2><span>Select a Movie:</span></h2><br>
+    <select (change)="selectChangeHandler($event)" >
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let movie of movieData"  
+              value={{movie.smd}}>  
+          {{movie.smn}}  
+      </option>  
+    </select>
+    <br><br>
+    
+    <div>
+        <button [disabled]="subMovieId == -1" style="width: 210px;" (click)="onSubmit($event)" class="btn btn-primary">Add Watched Movie</button>
+        <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+    </div>
+

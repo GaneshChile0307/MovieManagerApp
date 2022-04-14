@@ -1,0 +1,36 @@
+<div id="background">
+  <div>
+    <button type="button" (click)="BackButton()" style="width: 70px; height: 30px; margin-left: 800px; margin-bottom: 30px;">Logout</button>
+  </div>
+  <div id="main">
+    <div id="heading">
+      <h3>Welcome {{currentUserName}}!</h3>
+    </div>
+    <div id="content">
+      <br>
+      <div>
+      <button type="button" (click)="addWatchedMovies($event)" class="btn btn-primary btn-rounded">Add Watched Movies</button>
+      </div>
+      <br>
+      <div>
+      <button type="button" (click)="updateWatchedMovies($event)" class="btn btn-secondary btn-rounded">Update Watched Movies</button>
+      </div>
+      <br>
+      <div>
+        <button type="button" (click)="suggestMovies($event)" class="btn btn-success btn-rounded">Suggest Movies</button>
+      </div>
+      <br>
+      <div>
+        <button type="button" (click)="rateMovies($event)" class="btn btn-danger btn-rounded">Rate Movies</button>
+      </div>
+      <br>
+      <div>
+        <button type="button" (click)="updateRating($event)" class="btn btn-warning btn-rounded">Update Rating</button>
+      </div>
+      <br>
+      <div>
+      <button type="button" (click)="movieRatings($event)" class="btn btn-secondary btn-rounded">Movies Rating</button>
+      </div>
+    </div>
+  </div>
+</div>

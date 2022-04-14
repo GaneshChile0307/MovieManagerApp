@@ -1,0 +1,23 @@
+h2{
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select {
+    /* // ...existing styles */
+    grid-template-areas: "select";
+    width: 250px;
+    /* margin-left: 150px; */
+  }
+  
+  select,
+  .select:after {
+    grid-area: select;
+    width: 250px;
+    /* margin-left: 150px; */
+  }

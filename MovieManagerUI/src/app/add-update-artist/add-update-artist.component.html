@@ -1,0 +1,61 @@
+<div>
+  <h2>{{pageHeading}}</h2>
+</div>
+<br>
+<div style="text-align: -webkit-center">
+  <div>
+    <label> <b>Artist First Name </b> </label><br>
+    <input type="text" size="30" [(ngModel)]="artistFirstName">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Last Name </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistLastName">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist DOB </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistDOB">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Contact Number </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistContact">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Gender </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistGender">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Email </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistEmail">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Address </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistAddress">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist City </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistCity">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Country </b> </label><br>
+    <input type="text" size="30"  [(ngModel)]="artistCountry">
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Description </b> </label><br>
+    <textarea type="text" rows="4" cols="33" [(ngModel)]="artistDescription"></textarea>  
+  </div>
+  <br>
+</div>
+<br>
+<div class="center">
+  <button [disabled]="" class="btn btn-primary" style="width: 150px;" (click)="onSubmit()" >{{buttonTitle}}</button>
+  <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+</div>

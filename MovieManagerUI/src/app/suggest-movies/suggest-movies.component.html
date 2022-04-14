@@ -1,0 +1,19 @@
+<div>
+  <h2> Suggest Movies</h2>
+  <br><br>
+  <div>
+    <h4><span>Select a Movie:</span></h4>
+    <select (change)="selectChangeHandler($event)" >
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let category of movieCategories;  let i = index"  
+              value= {{category.mcateg}}>  
+          {{category.mcateg}}  
+      </option>  
+    </select>
+  </div>
+  <br><br>
+  <div>
+    <button [disabled]="" (click)="onSubmit($event)" style="width: 150px;" class="btn btn-primary">Suggest Movies</button>
+    <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <h3>Update Watched Movies</h3>
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>Movie Name</th>
+      <th>Movie Category</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let movie of movie_data; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{movie.smn}} </td>
+      <td>{{movie.sm_cat}}</td>
+      <td><span (click)="deleteMovie(movie.umtid)" class="close">&times;</span></td>
+      <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="container">
+  <div class="center">
+    <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px; ;" (click)="backButton()">Back</button>
+  </div>
+</div>

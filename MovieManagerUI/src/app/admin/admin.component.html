@@ -1,0 +1,36 @@
+<div id="background">
+
+  <div>
+    <button type="button" (click)="BackButton()" style="width: 70px; height: 30px; margin-left: 855px; margin-bottom: 30px;">Logout</button>
+  </div>
+  <div id="main">
+    <div id="heading">
+      <h2>Welcome {{ currentUserName }}</h2>  
+    </div>
+    <div id="content">
+      <br>
+      <div>
+      <button type="button" (click)="ManageArtistData($event)" class="btn btn-primary btn-rounded" >Artist Data Manager</button>
+      </div>
+      <br>
+      <div>
+      <button type="button" (click)="ManageMovieData($event)" class="btn btn-secondary btn-rounded">Movie Data Manager</button>
+      </div>
+      <br>
+      <div>
+      <button type="button" (click)="ManageSubordinateMovie($event)" class="btn btn-success btn-rounded">Subordinate Movie Manager</button>
+      </div>
+      <br>
+      <div>
+        <button type="button" (click)="ManageArtistMovieData($event)" class="btn btn-danger btn-rounded">Artist Movie Data Manager</button>
+      </div>
+      <br>
+      <div>
+        <button type="button" (click)="MovieRating($event)" class="btn btn-warning btn-rounded">Movie Rating</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

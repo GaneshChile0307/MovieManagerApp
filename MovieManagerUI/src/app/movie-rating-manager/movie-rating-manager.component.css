@@ -1,0 +1,17 @@
+h3{
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    margin-left: -50px;
+}
+
+tr:nth-child(ODD) {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,20 @@
+<h2>Rate Watched Movies</h2><br>
+  <h4><span>Select a Movie:</span></h4>
+    <select (change)="selectChangeHandler($event)" >
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let movie of movieData;  let i = index"  
+              value= {{i}}>  
+          {{movie.smn}}  
+      </option>  
+    </select>
+    <br><br>
+    <label> <b>Rating (1-5):</b> </label>
+    <input type="text" id="movieRating" name="movieRating" [(ngModel)]="movieRating">  <br><br>
+    <br><br>
+    <div>
+        <button [disabled]="(subMovieId == -1)||(movieRating == 0) || (movieRating >=6)" (click)="onSubmit($event)" class="btn btn-primary">Update Movie Rating</button>
+        <button class="btn btn-primary" [disabled]="(subMovieId == -1)" (click)="deleteUserMovieRating($event)">Delete Movie Rating</button>
+        <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 180px;" (click)="backButton()">Back</button>
+
+    </div>
+

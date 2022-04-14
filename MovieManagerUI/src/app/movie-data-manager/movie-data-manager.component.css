@@ -1,0 +1,13 @@
+h3{
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tr:nth-child(ODD) {
+    background-color: #f2f2f2;
+}

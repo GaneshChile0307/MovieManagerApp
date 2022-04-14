@@ -1,0 +1,15 @@
+.select {
+    /* // ...existing styles */
+    grid-template-areas: "select";
+    width: 250px;
+  }
+  
+  select,
+  .select:after {
+    grid-area: select;
+    width: 250px;
+  }
+
+input{
+  margin: 10px;
+}

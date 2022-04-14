@@ -1,0 +1,51 @@
+<div>
+  <h2>{{pageHeading}}</h2>
+</div>
+<br>
+<div style="text-align: -webkit-center">
+  <div>
+    <label> <b>Sub Movie Name </b> </label><br>
+    <input type="text" size="30" [(ngModel)]="subMovieName">
+  </div>
+  <br>
+  <div>
+    <h4><span>Select a  Parent Movie:</span></h4>
+    <select (change)="selectChangeHandler($event)">  [(ngModel)]="movieId"
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let movie of movieData;  let i = index"  
+              value= {{movie.mid}}>  
+          {{movie.mn}}  
+      </option>  
+    </select>
+  </div>
+  <br>
+  <div>
+    <label> <b>Sub Movie Category </b> </label><br>
+    <ng-multiselect-dropdown
+        [placeholder]="'Movie Categories'"
+        [settings]="dropdownSettings"
+        [data]="subMoviesCategory"
+        [(ngModel)]="selectedMovieCategory"
+        (onSelect)="onItemSelect($event)"
+        (onSelectAll)="onSelectAll($event)"
+        (onDeSelect) = "onDeSelect($event)">
+      </ng-multiselect-dropdown>
+  </div>
+  <br>
+  <div>
+    <label> <b>Sub Movie Sequel Number </b> </label><br>
+    <input type="text" size="30" [(ngModel)]="subMovieSequelNumber">
+  </div>
+  <br>
+  <div>
+    <label> <b>Sub Movie Description </b> </label><br>
+    <textarea type="text" rows="4" cols="33" [(ngModel)]="subMovieDescription"></textarea>  
+  </div>
+  <br><br>
+</div>
+<br>
+<div class="center">
+  <button [disabled]="" class="btn btn-primary" style="width: 150px;" (click)="onSubmit()" >{{buttonTitle}}</button>
+  <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+</div>
+

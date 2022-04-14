@@ -1,0 +1,48 @@
+<div>
+  <h2>{{pageHeading}}</h2>
+</div>
+<br>
+<div style="text-align: -webkit-center">
+  <div>
+    <h4><span>Select a Movie:</span></h4>
+    <select (change)="selectChangeSubMovieHandler($event)">
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let movie of submovieData;  let i = index"  
+              value= {{movie.sub_movie_id}}>  
+          {{movie.sub_movie_name}}  
+      </option>  
+    </select>
+  </div>
+  <br>
+  <div>
+    <h4><span>Select an Artist:</span></h4>
+    <select (change)="selectChangeArtistHandler($event)">
+      <option value="-1">--Select--</option>  
+      <option *ngFor="let artist of artistData;  let i = index"  
+              value= {{artist.aid}}>  
+          {{artist.afn}}  {{artist.aln}}  
+      </option>  
+    </select>
+  </div>
+  <br>
+  <div>
+    <label> <b>Artist Type </b> </label><br>
+    <ng-multiselect-dropdown
+        [placeholder]="'Movie Categories'"
+        [settings]="dropdownSettings"
+        [data]="artistsTypeData"
+        [(ngModel)]="selectedArtistType"
+        (onSelect)="onItemSelect($event)"
+        (onSelectAll)="onSelectAll($event)"
+        (onDeSelect) = "onDeSelect($event)">
+      </ng-multiselect-dropdown>
+  </div>
+  <br><br>
+</div>
+<br>
+<div class="center">
+  <button [disabled]="" class="btn btn-primary" style="width: 150px;" (click)="onSubmit()" >{{buttonTitle}}</button>
+  <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+</div>
+
+

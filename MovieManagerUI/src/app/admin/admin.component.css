@@ -1,0 +1,37 @@
+button{
+    height: 50px;
+    width: 300px;
+    margin-left: 130px;
+    border-style: solid;
+}
+
+h2{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    background-color: cadetblue;
+    border-style: solid;
+}
+
+#main {
+    height: 1400px;
+    width: 1400px;
+    margin-left: -400px;
+    margin-top: -20px;
+    opacity: 1;
+}
+
+#heading {
+    height: 100px;
+    width: 1340px;
+}
+
+#content {
+    margin-left: 400px;
+}
+
+/* #background {
+    background-image: url("C:/Users/DELL/Desktop/Frontend_AMD/MovieManagerUI/src/assets/background.jpg");
+    width: 1400px;
+    margin-left: -400px;
+} */

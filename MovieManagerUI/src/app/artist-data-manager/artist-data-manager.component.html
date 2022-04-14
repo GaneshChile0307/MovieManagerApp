@@ -1,0 +1,45 @@
+<h3>Artist Data</h3>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Artist Name</th>
+        <th>Artist DOB</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Description</th>
+        <th>Update Artist</th>
+        <th>Delete Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let artist of artistData; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{artist.afn}} {{artist.aln}} </td>
+        <td>{{artist.dob}}</td>
+        <td>{{artist.ag}}</td>
+        <td>{{artist.acn}}</td>
+        <td>{{artist.email}}</td>
+        <td>{{artist.addr}}</td>
+        <td>{{artist.city}}</td>
+        <td>{{artist.ctry}}</td>
+        <td>{{artist.descrp}}</td>
+        <td><span (click)="updateArtist(artist.aid)" style="color: blue; cursor: pointer;">Edit</span></td>
+        <td><span (click)="deleteArtist(artist.aid)" class="close">&times;</span></td>
+        <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div class="center">
+    <button [disabled]="" class="btn btn-primary" style="width: 150px;" (click)="addArtist()">Add Artist</button>
+    <br>
+    <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+</div>
+

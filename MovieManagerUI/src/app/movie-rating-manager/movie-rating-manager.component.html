@@ -1,0 +1,34 @@
+<h3>Movie Rating</h3>
+<br>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Movie Name</th>
+        <th>Parent Movie Name</th>
+        <th>Movie Sequel Number</th>
+        <th>Movie Category</th>
+        <th>Movie Description</th>
+        <th>Movie Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let movie of ratingData; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{movie.sub_movie_name}} </td>
+        <td>{{movie.movie_name}}</td>
+        <td>{{movie.sub_movie_sequel_number}}</td>
+        <td>{{movie.sub_movie_category}}</td>
+        <td>{{movie.sub_movie_description}}</td>
+        <td>{{movie.sub_movie_rating}}</td>
+        <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div class="center">
+    <button [disabled]="" class="btn btn-primary" (click)="onSumbit()">Back</button>
+</div>
+

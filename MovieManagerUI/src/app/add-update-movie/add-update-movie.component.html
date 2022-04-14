@@ -1,0 +1,21 @@
+<div>
+  <h2>{{pageHeading}}</h2>
+</div>
+<br>
+<div style="text-align: -webkit-center">
+  <div>
+    <label> <b>Movie Name </b> </label><br>
+    <input type="text" size="30" id="movieRating" name="movieRating" [(ngModel)]="movieName">
+  </div>
+  <br>
+  <div>
+    <label> <b>Movie Description </b> </label><br>
+    <textarea type="text" rows="4" cols="33" id="movieRating" name="movieRating" [(ngModel)]="movieDescription"></textarea>  
+  </div>
+  <br><br>
+</div>
+<br>
+<div class="center">
+  <button [disabled]="" class="btn btn-primary" style="width: 150px;" (click)="onSubmit()" >{{buttonTitle}}</button>
+  <button [disabled]="" class="btn btn-secondary" style="width: 150px; margin-left: 10px;" (click)="backButton()">Back</button>
+</div>
